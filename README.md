@@ -46,6 +46,25 @@ A browser extension that applies beautiful custom styling overrides to the Unity
    - Go to https://discussions.unity.com
    - The custom styles will automatically apply
 
+## Screenshots
+
+Here are some examples of the enhanced Unity Discussions experience:
+
+![Screenshot 1](1.png)
+*Enhanced dark theme with improved navigation and styling*
+
+![Screenshot 2](2.png)
+*Custom tag colors and improved topic list layout*
+
+![Screenshot 3](3.png)
+*Refined user interface elements and better readability*
+
+![Screenshot 4](4.png)
+*Improved notification panels and quick access menus*
+
+![Screenshot 5](5.png)
+*Enhanced post layout with better typography and spacing*
+
 
 ## Development
 
