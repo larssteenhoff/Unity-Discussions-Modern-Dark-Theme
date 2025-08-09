@@ -1,0 +1,2046 @@
+/* Unity Discussions Custom Styles Override */
+
+/* Root variables for easy theming */
+:root {
+  --primary-color: #2196F3;
+  --secondary-color: #FFC107;
+  --background-color: #1a1a1a;
+  --surface-color: #2d2d2d;
+  --text-color: #ffffff;
+  --text-secondary: #b0b0b0;
+  --border-color: #404040;
+  --hover-color: #3d3d3d;
+  --accent-color: #00bcd4;
+}
+
+/* Dark theme override for the entire site */
+body {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Header styling */
+.d-header {
+  background-color: var(--surface-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+.d-header .title a {
+  color: var(--primary-color) !important;
+  font-weight: bold !important;
+  font-size: 18px !important;
+}
+
+/* Specific targeting for the main site title */
+#ember3 > div.drop-down-mode.d-header-wrap > header > div > div > div.two-rows.extra-info-wrapper > div > div > h1 > a,
+.d-header .title h1 a,
+.d-header .extra-info-wrapper h1 a {
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 2px !important;
+  display: inline-block !important;
+}
+
+/* Navigation menu */
+.d-header .nav-pills > li > a {
+  color: var(--text-secondary) !important;
+  transition: all 0.3s ease !important;
+}
+
+.d-header .nav-pills > li > a:hover {
+  background-color: var(--hover-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Main content area */
+.container,
+.wrap {
+  background-color: var(--background-color) !important;
+}
+
+/* Topic list styling */
+.topic-list {
+  background-color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.topic-list-item {
+  background-color: var(--surface-color) !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  transition: background-color 0.3s ease !important;
+}
+
+.topic-list-item:hover {
+  background-color: var(--hover-color) !important;
+}
+
+.topic-list-item .main-link a {
+  color: var(--text-color) !important;
+  font-weight: 500 !important;
+  font-size: 15px !important;
+}
+
+.topic-list-item .main-link a:visited {
+  color: var(--text-secondary) !important;
+}
+
+/* Topic title text size - subtle reduction */
+.topic-list-item .title,
+.topic-list-item .main-link,
+.topic-list-item .topic-title,
+.topic-list .topic-title a,
+.topic-list .main-link a {
+  font-size: 15px !important;
+}
+
+/* Topic preview text - less white/more muted */
+.topic-list-item .topic-excerpt,
+.topic-list-item .topic-body,
+.topic-list .topic-excerpt,
+.topic-excerpt,
+.topic-body {
+  color: #b0b0b0 !important;
+  opacity: 0.8 !important;
+}
+
+/* Topic preview in different contexts */
+.topic-list tbody tr .topic-excerpt,
+.topic-list-item .raw-topic-link .topic-excerpt {
+  color: #999 !important;
+  opacity: 0.75 !important;
+}
+
+/* Post content styling */
+.topic-post {
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.topic-post .cooked {
+  color: var(--text-color) !important;
+  line-height: 1.6 !important;
+}
+
+.topic-post .cooked p {
+  color: var(--text-color) !important;
+}
+
+.topic-post .cooked h1,
+.topic-post .cooked h2,
+.topic-post .cooked h3,
+.topic-post .cooked h4,
+.topic-post .cooked h5,
+.topic-post .cooked h6 {
+  color: var(--primary-color) !important;
+}
+
+/* Code blocks */
+.topic-post .cooked pre,
+.topic-post .cooked code {
+  background-color: #1e1e1e !important;
+  border: 1px solid var(--border-color) !important;
+  color: #d4d4d4 !important;
+}
+
+.topic-post .cooked pre code {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Sidebar styling */
+.sidebar-section {
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  margin-bottom: 20px !important;
+}
+
+.sidebar-section h3 {
+  color: var(--primary-color) !important;
+  background-color: var(--hover-color) !important;
+  margin: 0 !important;
+  padding: 15px !important;
+  border-radius: 8px 8px 0 0 !important;
+}
+
+/* Buttons */
+.btn {
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.btn-primary:hover {
+  background-color: #1976D2 !important;
+  border-color: #1976D2 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Search bar */
+.search-menu input[type="text"] {
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+  border-radius: 6px !important;
+}
+
+.search-menu input[type="text"]:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2) !important;
+}
+
+/* User menu */
+.user-menu {
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+}
+
+.user-menu li a {
+  color: var(--text-color) !important;
+}
+
+.user-menu li a:hover {
+  background-color: var(--hover-color) !important;
+}
+
+/* Categories */
+.category-list {
+  background-color: var(--surface-color) !important;
+  border-radius: 8px !important;
+}
+
+.category {
+  border-bottom: 1px solid var(--border-color) !important;
+}
+
+.category-name {
+  color: var(--text-color) !important;
+}
+
+/* Tags */
+.discourse-tag:not(.simple) {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-radius: 4px !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+}
+
+/* Breadcrumbs/Tags styling - adaptive for dark and light themes */
+
+/* Dark theme - default tags with darker background */
+body:not(.light-theme) .discourse-tag.simple,
+body:not(.light-theme) .discourse-tag,
+body:not(.light-theme) a.discourse-tag,
+body:not(.light-theme) .breadcrumb .discourse-tag,
+body:not(.light-theme) .breadcrumbs .discourse-tag,
+body.dark-theme .discourse-tag.simple,
+body.dark-theme .discourse-tag,
+body.dark-theme a.discourse-tag,
+body[data-theme="dark"] .discourse-tag.simple,
+body[data-theme="dark"] .discourse-tag,
+body[data-theme="dark"] a.discourse-tag {
+  background-color: rgba(60, 60, 60, 0.9) !important;
+  color: white !important;
+  border: 1px solid rgba(40, 40, 40, 0.9) !important;
+  border-radius: 4px !important;
+  padding: 2px 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: 1.2 !important;
+}
+
+/* Dark theme - color-coded tags with higher specificity */
+body:not(.light-theme) .discourse-tag[data-tag-name="bug"], 
+body:not(.light-theme) a.discourse-tag[data-tag-name="bug"],
+body.dark-theme .discourse-tag[data-tag-name="bug"],
+body.dark-theme a.discourse-tag[data-tag-name="bug"],
+body[data-theme="dark"] .discourse-tag[data-tag-name="bug"],
+body[data-theme="dark"] a.discourse-tag[data-tag-name="bug"] {
+  background-color: rgba(244, 67, 54, 0.8) !important;
+  color: white !important;
+  border-color: rgba(211, 47, 47, 0.9) !important;
+}
+
+/* Bug tag icons - no background, just icon color */
+body:not(.light-theme) .discourse-tag[data-tag-name="bug"] svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="bug"] .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="bug"] svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="bug"] .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="bug"] svg,
+body.dark-theme .discourse-tag[data-tag-name="bug"] .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="bug"] svg,
+body.dark-theme a.discourse-tag[data-tag-name="bug"] .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="bug"] svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="bug"] .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="bug"] svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="bug"] .tag-icon {
+  background-color: transparent !important;
+  color: rgba(244, 67, 54, 1) !important;
+  fill: rgba(244, 67, 54, 1) !important;
+}
+
+body:not(.light-theme) .discourse-tag[data-tag-name="conversation"],
+body:not(.light-theme) a.discourse-tag[data-tag-name="conversation"],
+body.dark-theme .discourse-tag[data-tag-name="conversation"],
+body.dark-theme a.discourse-tag[data-tag-name="conversation"],
+body[data-theme="dark"] .discourse-tag[data-tag-name="conversation"],
+body[data-theme="dark"] a.discourse-tag[data-tag-name="conversation"] {
+  background-color: rgba(255, 152, 0, 0.8) !important;
+  color: white !important;
+  border-color: rgba(230, 126, 0, 0.9) !important;
+}
+
+/* Conversation tag icons - no background, just icon color */
+body:not(.light-theme) .discourse-tag[data-tag-name="conversation"] svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="conversation"] .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="conversation"] svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="conversation"] .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="conversation"] svg,
+body.dark-theme .discourse-tag[data-tag-name="conversation"] .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="conversation"] svg,
+body.dark-theme a.discourse-tag[data-tag-name="conversation"] .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="conversation"] svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="conversation"] .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="conversation"] svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="conversation"] .tag-icon {
+  background-color: transparent !important;
+  color: rgba(76, 175, 80, 1) !important;
+  fill: rgba(76, 175, 80, 1) !important;
+}
+
+body:not(.light-theme) .discourse-tag[data-tag-name="question"],
+body:not(.light-theme) a.discourse-tag[data-tag-name="question"],
+body.dark-theme .discourse-tag[data-tag-name="question"],
+body.dark-theme a.discourse-tag[data-tag-name="question"],
+body[data-theme="dark"] .discourse-tag[data-tag-name="question"],
+body[data-theme="dark"] a.discourse-tag[data-tag-name="question"] {
+  background-color: rgba(33, 150, 243, 0.8) !important;
+  color: white !important;
+  border-color: rgba(25, 118, 210, 0.9) !important;
+}
+
+/* Question tag icons - no background, just icon color */
+body:not(.light-theme) .discourse-tag[data-tag-name="question"] svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="question"] .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="question"] svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="question"] .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="question"] svg,
+body.dark-theme .discourse-tag[data-tag-name="question"] .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="question"] svg,
+body.dark-theme a.discourse-tag[data-tag-name="question"] .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="question"] svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="question"] .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="question"] svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="question"] .tag-icon {
+  background-color: transparent !important;
+  color: rgba(33, 150, 243, 1) !important;
+  fill: rgba(33, 150, 243, 1) !important;
+}
+
+body:not(.light-theme) .discourse-tag[data-tag-name="official"],
+body:not(.light-theme) a.discourse-tag[data-tag-name="official"],
+body.dark-theme .discourse-tag[data-tag-name="official"],
+body.dark-theme a.discourse-tag[data-tag-name="official"],
+body[data-theme="dark"] .discourse-tag[data-tag-name="official"],
+body[data-theme="dark"] a.discourse-tag[data-tag-name="official"] {
+  background-color: #000000 !important;
+  color: white !important;
+  border-color: rgba(33, 33, 33, 0.9) !important;
+}
+
+/* Official tag icons - no background, just icon color */
+body:not(.light-theme) .discourse-tag[data-tag-name="official"] svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="official"] .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="official"] svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="official"] .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="official"] svg,
+body.dark-theme .discourse-tag[data-tag-name="official"] .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="official"] svg,
+body.dark-theme a.discourse-tag[data-tag-name="official"] .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="official"] svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="official"] .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="official"] svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="official"] .tag-icon {
+  background-color: transparent !important;
+  color: white !important;
+  fill: white !important;
+}
+
+/* Official tag icons on hover - black like the text */
+body:not(.light-theme) .discourse-tag[data-tag-name="official"]:hover svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="official"]:hover .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="official"]:hover svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="official"]:hover .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="official"]:hover svg,
+body.dark-theme .discourse-tag[data-tag-name="official"]:hover .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="official"]:hover svg,
+body.dark-theme a.discourse-tag[data-tag-name="official"]:hover .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="official"]:hover svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="official"]:hover .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="official"]:hover svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="official"]:hover .tag-icon {
+  color: black !important;
+  fill: black !important;
+}
+
+body:not(.light-theme) .discourse-tag[data-tag-name="releases"],
+body:not(.light-theme) a.discourse-tag[data-tag-name="releases"],
+body.dark-theme .discourse-tag[data-tag-name="releases"],
+body.dark-theme a.discourse-tag[data-tag-name="releases"],
+body[data-theme="dark"] .discourse-tag[data-tag-name="releases"],
+body[data-theme="dark"] a.discourse-tag[data-tag-name="releases"] {
+  background-color: #3e9eba !important;
+  color: white !important;
+  border-color: rgba(46, 122, 144, 0.9) !important;
+}
+
+/* Releases tag icons - no background, just icon color */
+body:not(.light-theme) .discourse-tag[data-tag-name="releases"] svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="releases"] .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="releases"] svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="releases"] .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="releases"] svg,
+body.dark-theme .discourse-tag[data-tag-name="releases"] .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="releases"] svg,
+body.dark-theme a.discourse-tag[data-tag-name="releases"] .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="releases"] svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="releases"] .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="releases"] svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="releases"] .tag-icon {
+  background-color: transparent !important;
+  color: white !important;
+  fill: white !important;
+}
+
+/* Ensure releases tag icons are always white everywhere */
+.discourse-tag[data-tag-name="releases"] svg,
+.discourse-tag[data-tag-name="releases"] .tag-icon,
+.discourse-tag[data-tag-name="releases"] *,
+a.discourse-tag[data-tag-name="releases"] svg,
+a.discourse-tag[data-tag-name="releases"] .tag-icon,
+a.discourse-tag[data-tag-name="releases"] *,
+[data-tag-name="releases"] svg,
+[data-tag-name="releases"] .tag-icon {
+  color: white !important;
+  fill: white !important;
+}
+
+body:not(.light-theme) .discourse-tag[data-tag-name="feedback"],
+body:not(.light-theme) a.discourse-tag[data-tag-name="feedback"],
+body.dark-theme .discourse-tag[data-tag-name="feedback"],
+body.dark-theme a.discourse-tag[data-tag-name="feedback"],
+body[data-theme="dark"] .discourse-tag[data-tag-name="feedback"],
+body[data-theme="dark"] a.discourse-tag[data-tag-name="feedback"] {
+  background-color: rgba(76, 175, 80, 0.8) !important;
+  color: white !important;
+  border-color: rgba(56, 142, 60, 0.9) !important;
+}
+
+/* Feedback tag icons - no background, just icon color */
+body:not(.light-theme) .discourse-tag[data-tag-name="feedback"] svg,
+body:not(.light-theme) .discourse-tag[data-tag-name="feedback"] .tag-icon,
+body:not(.light-theme) a.discourse-tag[data-tag-name="feedback"] svg,
+body:not(.light-theme) a.discourse-tag[data-tag-name="feedback"] .tag-icon,
+body.dark-theme .discourse-tag[data-tag-name="feedback"] svg,
+body.dark-theme .discourse-tag[data-tag-name="feedback"] .tag-icon,
+body.dark-theme a.discourse-tag[data-tag-name="feedback"] svg,
+body.dark-theme a.discourse-tag[data-tag-name="feedback"] .tag-icon,
+body[data-theme="dark"] .discourse-tag[data-tag-name="feedback"] svg,
+body[data-theme="dark"] .discourse-tag[data-tag-name="feedback"] .tag-icon,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="feedback"] svg,
+body[data-theme="dark"] a.discourse-tag[data-tag-name="feedback"] .tag-icon {
+  background-color: transparent !important;
+  color: white !important;
+  fill: white !important;
+}
+
+/* Removed duplicate tag color rules - now handled by topic list specific rules below */
+
+/* Dark theme - keep the last tag white (except color-coded tags) */
+body:not(.light-theme) .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+body:not(.light-theme) a.discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+body.dark-theme .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+body[data-theme="dark"] .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]) {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Light theme - default tags */
+body.light-theme .discourse-tag.simple,
+body.light-theme .discourse-tag,
+body.light-theme a.discourse-tag,
+body.light-theme .breadcrumb .discourse-tag,
+body.light-theme .breadcrumbs .discourse-tag,
+body[data-theme="light"] .discourse-tag.simple,
+body[data-theme="light"] .discourse-tag,
+body[data-theme="light"] a.discourse-tag {
+  background-color: rgba(102, 102, 102, 0.7) !important;
+  color: white !important;
+  border: 1px solid rgba(119, 119, 119, 0.8) !important;
+  border-radius: 4px !important;
+  padding: 2px 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none !important;
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: 1.2 !important;
+}
+
+/* Removed duplicate light theme tag colors - now handled by topic list specific rules below */
+
+/* Light theme - keep the last tag lighter */
+body.light-theme .discourse-tag:last-child,
+body.light-theme a.discourse-tag:last-child,
+body[data-theme="light"] .discourse-tag:last-child {
+  background-color: rgba(51, 51, 51, 0.8) !important;
+}
+
+/* Hover effects for dark theme */
+body:not(.light-theme) .discourse-tag.simple:hover,
+body:not(.light-theme) .discourse-tag:hover,
+body:not(.light-theme) a.discourse-tag:hover,
+body.dark-theme .discourse-tag:hover,
+body[data-theme="dark"] .discourse-tag:hover {
+  background-color: #f0f0f0 !important;
+  color: black !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Hover effects for light theme */
+body.light-theme .discourse-tag.simple:hover,
+body.light-theme .discourse-tag:hover,
+body.light-theme a.discourse-tag:hover,
+body[data-theme="light"] .discourse-tag:hover {
+  background-color: #444 !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Tag icons for dark theme */
+body:not(.light-theme) .discourse-tag .tag-icon,
+body:not(.light-theme) .discourse-tag .tag-icon svg,
+body.dark-theme .discourse-tag .tag-icon svg,
+body[data-theme="dark"] .discourse-tag .tag-icon svg {
+  color: black !important;
+  fill: black !important;
+}
+
+/* Tag icons for light theme */
+body.light-theme .discourse-tag .tag-icon,
+body.light-theme .discourse-tag .tag-icon svg,
+body[data-theme="light"] .discourse-tag .tag-icon svg {
+  color: white !important;
+  fill: white !important;
+}
+
+/* Remove conflicting rule that was forcing all tags to black */
+
+/* All tags in topic lists get white text except the last one */
+.topic-list .discourse-tag:not(:last-child),
+.topic-list .discourse-tag:not(:last-child) *,
+.topic-list-item .discourse-tag:not(:last-child),
+.topic-list-item .discourse-tag:not(:last-child) *,
+.topic-list a.discourse-tag:not(:last-child),
+.topic-list a.discourse-tag:not(:last-child) * {
+  color: white !important;
+}
+
+/* Last tags get white background and black text (except color-coded tags) */
+.topic-list .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+.topic-list-item .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+.topic-list a.discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+a.discourse-tag:last-child[style*="color: black"]:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]),
+.discourse-tag:last-child[style*="color: black"]:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]) {
+  background-color: white !important;
+  color: black !important;
+  border-color: rgba(200, 200, 200, 0.9) !important;
+}
+
+.topic-list .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]) *,
+.topic-list-item .discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]) *,
+.topic-list a.discourse-tag:last-child:not([data-tag-name="bug"]):not([data-tag-name="conversation"]):not([data-tag-name="question"]):not([data-tag-name="official"]):not([data-tag-name="releases"]):not([data-tag-name="feedback"]) * {
+  color: black !important;
+}
+
+/* When last tag has white background, ensure text is black for readability */
+.discourse-tag:last-child[style*="background-color: white"],
+.discourse-tag:last-child[style*="background-color: #ffffff"],
+.discourse-tag:last-child[style*="background-color: #fff"],
+.discourse-tag:last-child[style*="background: white"],
+.discourse-tag:last-child[style*="background: #ffffff"],
+.discourse-tag:last-child[style*="background: #fff"],
+a.discourse-tag:last-child[style*="background-color: white"],
+a.discourse-tag:last-child[style*="background-color: #ffffff"],
+a.discourse-tag:last-child[style*="background-color: #fff"],
+a.discourse-tag:last-child[style*="background: white"],
+a.discourse-tag:last-child[style*="background: #ffffff"],
+a.discourse-tag:last-child[style*="background: #fff"] {
+  color: black !important;
+}
+
+.discourse-tag:last-child[style*="background-color: white"] *,
+.discourse-tag:last-child[style*="background-color: #ffffff"] *,
+.discourse-tag:last-child[style*="background-color: #fff"] *,
+.discourse-tag:last-child[style*="background: white"] *,
+.discourse-tag:last-child[style*="background: #ffffff"] *,
+.discourse-tag:last-child[style*="background: #fff"] *,
+a.discourse-tag:last-child[style*="background-color: white"] *,
+a.discourse-tag:last-child[style*="background-color: #ffffff"] *,
+a.discourse-tag:last-child[style*="background-color: #fff"] *,
+a.discourse-tag:last-child[style*="background: white"] *,
+a.discourse-tag:last-child[style*="background: #ffffff"] *,
+a.discourse-tag:last-child[style*="background: #fff"] * {
+  color: black !important;
+}
+
+/* Color-coded tags now properly integrated into dark theme rules above */
+
+/* Exception: Keep sidebar tags with white text */
+#sidebar-section-content-tags .discourse-tag,
+#sidebar-section-content-tags .discourse-tag *,
+#sidebar-section-content-tags .tag,
+#sidebar-section-content-tags .tag *,
+#sidebar-section-content-tags [class*="discourse-tag"],
+#sidebar-section-content-tags [class*="discourse-tag"] *,
+.sidebar-section .discourse-tag,
+.sidebar-section .discourse-tag *,
+.sidebar-section .tag,
+.sidebar-section .tag * {
+  color: white !important;
+}
+
+/* Sidebar tag icons with corresponding colors - using correct data-tag-name structure */
+li[data-tag-name="Bug"] .sidebar-section-link-prefix.icon svg,
+li[data-tag-name="bug"] .sidebar-section-link-prefix.icon svg {
+  color: rgba(244, 67, 54, 0.9) !important;
+  fill: rgba(244, 67, 54, 0.9) !important;
+}
+
+li[data-tag-name="Conversation"] .sidebar-section-link-prefix.icon svg,
+li[data-tag-name="conversation"] .sidebar-section-link-prefix.icon svg {
+  color: rgba(255, 152, 0, 0.9) !important;
+  fill: rgba(255, 152, 0, 0.9) !important;
+}
+
+li[data-tag-name="Question"] .sidebar-section-link-prefix.icon svg,
+li[data-tag-name="question"] .sidebar-section-link-prefix.icon svg {
+  color: rgba(33, 150, 243, 0.9) !important;
+  fill: rgba(33, 150, 243, 0.9) !important;
+}
+
+li[data-tag-name="Official"] .sidebar-section-link-prefix.icon svg,
+li[data-tag-name="official"] .sidebar-section-link-prefix.icon svg {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+li[data-tag-name="Releases"] .sidebar-section-link-prefix.icon svg,
+li[data-tag-name="releases"] .sidebar-section-link-prefix.icon svg {
+  color: #3e9eba !important;
+  fill: #3e9eba !important;
+}
+
+li[data-tag-name="Feedback"] .sidebar-section-link-prefix.icon svg,
+li[data-tag-name="feedback"] .sidebar-section-link-prefix.icon svg {
+  color: rgba(76, 175, 80, 0.9) !important;
+  fill: rgba(76, 175, 80, 0.9) !important;
+}
+
+/* Ensure Unity logo tags have proper text color for light theme */
+body.light-theme .discourse-tag.simple,
+body.light-theme .discourse-tag.simple *,
+body.light-theme a[data-tag-name="official"],
+body.light-theme a[data-tag-name="official"] *,
+body.light-theme .discourse-tag span,
+body.light-theme .discourse-tag .tag-icon + *,
+body[data-theme="light"] .discourse-tag span {
+  color: white !important;
+}
+
+/* Replace commas between tags with dashes - comprehensive targeting */
+.discourse-tag:not(:last-child):after,
+.discourse-tags .discourse-tag:not(:last-child):after,
+.list-tags .discourse-tag:not(:last-child):after,
+/* REMOVED - No more dashes between tags */
+
+/* Hide original comma separators - comprehensive targeting */
+.discourse-tags .comma,
+.list-tags .comma,
+.topic-list .comma,
+.topic-list-item .comma,
+.topic-meta-data .comma,
+span.comma,
+.comma {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Alternative approach - replace comma content directly */
+.discourse-tags::after,
+.list-tags::after {
+  content: "" !important;
+}
+
+/* Target comma text nodes more aggressively */
+*:contains(",") {
+  font-size: 0 !important;
+}
+
+/* REMOVED - No more dashes between tags */
+
+/* Composer (new post/reply) */
+.d-editor-container {
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+}
+
+.d-editor-textarea-wrapper {
+  background-color: var(--background-color) !important;
+}
+
+.d-editor-input {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  border: none !important;
+}
+
+.d-editor-preview {
+  background-color: var(--surface-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color) !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color) !important;
+  border-radius: 4px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary) !important;
+}
+
+/* Loading indicators */
+.spinner {
+  border-color: var(--primary-color) !important;
+}
+
+/* Notifications */
+.notification {
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  color: var(--text-color) !important;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.topic-list-item,
+.topic-post {
+  animation: fadeIn 0.3s ease-out !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topic-list-item {
+    padding: 15px !important;
+  }
+  
+  .topic-post {
+    margin: 10px !important;
+    border-radius: 6px !important;
+  }
+}
+
+/* Additional Unity-specific styling */
+.unity-logo {
+  filter: brightness(1.2) !important;
+}
+
+/* Banner styling - rounded corners and transparent background */
+#banner {
+  border-radius: 12px !important;
+  background-color: rgba(45, 45, 45, 0.7) !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(64, 64, 64, 0.5) !important;
+  margin: 5px 0 25px 0 !important;
+  padding: 15px !important;
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box !important;
+}
+
+/* Center the banner headline content - same way as search bar */
+#main-outlet > div.above-main-container-outlet.search-banner.welcome-banner > div > div > div.custom-search-banner-headline {
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 1110px !important;
+  width: 100% !important;
+}
+
+/* Center the search menu within the banner */
+#main-outlet > div.above-main-container-outlet.search-banner.welcome-banner > div > div > div.search-menu.welcome-banner__search-menu > div > div > div {
+  margin: 0 auto !important;
+  text-align: center !important;
+  max-width: 1110px !important;
+  width: 100% !important;
+}
+
+/* Read state icon spacing and visibility */
+.read-state {
+  margin-left: 40px !important;
+  margin-right: 20px !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.read-state svg,
+.read-state .d-icon,
+.read-state .fa-circle,
+.read-state .d-icon-circle {
+  margin-left: 4px !important;
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: var(--primary-color) !important;
+  fill: var(--primary-color) !important;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+/* Ensure read state is visible in topic lists */
+.topic-list-item .read-state,
+.topic-meta-data .read-state,
+.post-infos .read-state {
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+/* Move post-info elements further left */
+.post-infos {
+  margin-left: 30px !important;
+}
+
+.post-info {
+  margin-left: 15px !important;
+}
+
+.post-info.post-date {
+  margin-left: 25px !important;
+}
+
+.post-info.edits {
+  margin-left: -10px !important;
+  position: relative !important;
+  transform: translateX(20px) !important;
+}
+
+/* Additional spacing for specific elements to avoid overlap with read-state icon */
+.post-info.post-date a {
+  margin-left: 10px !important;
+}
+
+.post-info.edits button {
+  margin-left: -15px !important;
+  position: relative !important;
+  transform: translateX(30px) !important;
+  display: inline-block !important;
+}
+
+/* More specific targeting for edit buttons */
+.topic-meta-data .post-info.edits,
+.post-infos .post-info.edits {
+  position: relative !important;
+  transform: translateX(25px) !important;
+  margin-right: -25px !important;
+}
+
+.topic-meta-data .post-info.edits button,
+.post-infos .post-info.edits button {
+  position: relative !important;
+  transform: translateX(10px) !important;
+}
+
+/* Specifically target the time/date elements */
+.post-date,
+.relative-date,
+.post-info .post-date,
+a.post-date,
+span.relative-date {
+  margin-left: 20px !important;
+  padding-left: 10px !important;
+}
+
+/* Target the time span more specifically */
+.post-info.post-date .relative-date,
+.post-date .relative-date {
+  margin-left: 15px !important;
+  display: inline-block !important;
+}
+
+/* Force time element positioning based on the HTML structure */
+.topic-meta-data .post-infos .post-info.post-date,
+.topic-meta-data .post-info.post-date a,
+.topic-meta-data .post-date span.relative-date {
+  margin-left: 30px !important;
+  transform: translateX(-20px) !important;
+}
+
+/* Notifications panel styling (the side panel that opens when clicking notifications) */
+#quick-access-all-notifications,
+#quick-access-replies,
+#quick-access-messages,
+#quick-access-likes,
+#quick-access-mentions,
+[id^="quick-access-"],
+.quick-access-panel,
+.user-notifications-panel,
+.notifications-dropdown,
+.menu-panel.notifications {
+  width: 600px !important;
+  max-width: 600px !important;
+  min-width: 600px !important;
+}
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* REMOVED - Now using universal [id^="quick-access-"] selectors below */
+
+/* Remove blue selected line effect on user menu buttons - comprehensive targeting */
+#user-menu-button-likes,
+#user-menu-button-all-notifications,
+#user-menu-button-replies,
+#user-menu-button-mentions,
+[id^="user-menu-button-"],
+.menu-panel button,
+.menu-panel .btn,
+.user-menu button,
+.user-menu .btn {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Remove selected state styling - all states */
+#user-menu-button-likes.active,
+#user-menu-button-all-notifications.active,
+#user-menu-button-replies.active,
+#user-menu-button-mentions.active,
+[id^="user-menu-button-"].active,
+.menu-panel button.active,
+.menu-panel .btn.active,
+.user-menu button.active,
+.user-menu .btn.active,
+#user-menu-button-likes:focus,
+#user-menu-button-all-notifications:focus,
+#user-menu-button-replies:focus,
+#user-menu-button-mentions:focus,
+[id^="user-menu-button-"]:focus,
+.menu-panel button:focus,
+.menu-panel .btn:focus {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+/* Force remove any pseudo-elements that might create lines */
+#user-menu-button-likes::after,
+#user-menu-button-all-notifications::after,
+#user-menu-button-replies::after,
+#user-menu-button-mentions::after,
+[id^="user-menu-button-"]::after,
+.menu-panel button::after,
+.menu-panel .btn::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Force all quick-access panels to look identical */
+[id^="quick-access-"] {
+  width: 600px !important;
+  max-width: 600px !important;
+  min-width: 600px !important;
+  background-color: var(--surface-color) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Force all quick-access panel lists to look identical */
+[id^="quick-access-"] > ul,
+[id^="quick-access-"] ul {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  background-color: var(--surface-color) !important;
+}
+
+/* Force all quick-access list items to look identical */
+[id^="quick-access-"] > ul > li,
+[id^="quick-access-"] ul li,
+[id^="quick-access-"] li {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid var(--border-color) !important;
+  background-color: var(--surface-color) !important;
+  transition: none !important;
+}
+
+[id^="quick-access-"] > ul > li:hover,
+[id^="quick-access-"] ul li:hover,
+[id^="quick-access-"] li:hover {
+  background-color: var(--hover-color) !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+/* Force consistent icon placement across all quick-access panels */
+[id^="quick-access-"] > ul > li > a,
+[id^="quick-access-"] ul li a,
+[id^="quick-access-"] li a {
+  display: flex !important;
+  align-items: center !important;
+  padding: 10px 20px !important;
+  justify-content: flex-start !important;
+  gap: 15px !important;
+  text-decoration: none !important;
+  color: var(--text-color) !important;
+}
+
+/* Force consistent icon styling across all quick-access panels */
+[id^="quick-access-"] > ul > li > a > svg,
+[id^="quick-access-"] ul li a svg,
+[id^="quick-access-"] li a svg,
+[id^="quick-access-"] svg {
+  width: 20px !important;
+  height: 20px !important;
+  margin-left: 1px !important;
+  margin-right: 15px !important;
+  flex-shrink: 0 !important;
+  vertical-align: middle !important;
+  color: #0091ff !important;
+  fill: #0091ff !important;
+}
+
+/* Force consistent text content styling */
+[id^="quick-access-"] > ul > li > a > div,
+[id^="quick-access-"] ul li a div,
+[id^="quick-access-"] li a div,
+[id^="quick-access-"] .item-description,
+[id^="quick-access-"] .item-label {
+  width: 100% !important;
+  word-wrap: break-word !important;
+  white-space: normal !important;
+  max-width: none !important;
+  overflow: visible !important;
+  color: var(--text-color) !important;
+}
+
+/* Force consistent panel bottom controls */
+[id^="quick-access-"] .panel-body-bottom {
+  padding: 15px 20px !important;
+  border-top: 1px solid var(--border-color) !important;
+  background-color: var(--surface-color) !important;
+}
+
+/* Filter button styling - smaller height and margin - universal for all pages */
+#ember63-header,
+[id$="-header"].notifications-filter-header,
+.notifications-filter-header,
+.select-kit-header.notifications-filter-header,
+.dropdown-select-box-header.notifications-filter-header,
+.user-notifications-filter .select-kit-header,
+.notification-history .select-kit-header {
+  height: 28px !important;
+  min-height: 28px !important;
+  padding: 4px 12px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  margin-left: 2px !important;
+  line-height: 1.2 !important;
+}
+
+/* Remove margin around user-content section but add rounded corners */
+#user-content,
+.user-content {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+/* Universal styling for user navigation lists */
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul,
+.viewing-self section nav ul,
+.container.viewing-self nav ul {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--surface-color) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  align-items: center !important;
+}
+
+/* REMOVED - No longer adding padding below the first navigation list */
+
+/* Center text vertically in navigation list items */
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul > li,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul > li,
+.viewing-self section nav ul li,
+.container.viewing-self nav ul li {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 8px !important;
+}
+
+/* Center text in navigation links */
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul > li > a,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul > li > a,
+.viewing-self section nav ul li a,
+.container.viewing-self nav ul li a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  text-decoration: none !important;
+  color: var(--text-color) !important;
+  line-height: 1 !important;
+}
+
+/* Add margin below the first section */
+#main-outlet > div.container.viewing-self > section > div > section {
+  margin-bottom: 5px !important;
+}
+
+/* Remove gray background from selected navigation items - more aggressive */
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul > li,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul > li,
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul > li.active,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul > li.active,
+.viewing-self section nav ul li,
+.viewing-self section nav ul li.active,
+.viewing-self section nav ul li[class*="active"],
+.container.viewing-self nav ul li,
+.container.viewing-self nav ul li.active,
+.container.viewing-self nav ul li[class*="active"],
+.viewing-self nav ul li.active,
+.viewing-self nav ul li[class*="active"] {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Force remove background on any child elements */
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul > li *,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul > li *,
+.viewing-self section nav ul li *,
+.container.viewing-self nav ul li * {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Add blue underline to selected navigation items */
+#main-outlet > div.container.viewing-self > section > div > section > nav > ul > li.active > a,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav > ul > li.active > a,
+.viewing-self section nav ul li.active a,
+.container.viewing-self nav ul li.active a,
+.viewing-self nav ul li[class*="active"] a,
+.container.viewing-self nav ul li[class*="active"] a {
+  border-bottom: 2px solid #0091ff !important;
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Ensure the panel doesn't go off-screen on smaller displays */
+@media (max-width: 700px) {
+  #quick-access-all-notifications,
+  [id^="quick-access-"],
+  .quick-access-panel {
+    width: calc(100vw - 40px) !important;
+    max-width: calc(100vw - 40px) !important;
+    min-width: 320px !important;
+    right: 20px !important;
+  }
+}
+
+/* Custom focus states for accessibility */
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+}
+
+/* Completely remove all outlines and borders from buttons */
+button,
+button:focus,
+button:active,
+button:hover,
+.btn,
+.btn:focus,
+.btn:active,
+.btn:hover,
+input[type="button"],
+input[type="button"]:focus,
+input[type="button"]:active,
+input[type="submit"],
+input[type="submit"]:focus,
+input[type="submit"]:active,
+[role="button"],
+[role="button"]:focus,
+[role="button"]:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Subtle hover effect for buttons without outlines */
+button:hover,
+.btn:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+[role="button"]:hover {
+  background-color: var(--hover-color) !important;
+  transform: translateY(-1px) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Nuclear option - remove ALL possible outlines from ANY clickable element */
+*:focus,
+*:active,
+*[tabindex]:focus,
+*[tabindex]:active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* But keep outlines for accessibility on form inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary-color) !important;
+  outline-offset: 2px !important;
+  border: 1px solid var(--primary-color) !important;
+}
+
+/* Fix double outlines on search boxes */
+input[type="search"]:focus,
+.search-menu input:focus,
+.search-input:focus,
+[class*="search"] input:focus {
+  outline: none !important;
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: 0 0 0 1px var(--primary-color) !important;
+}
+
+/* AGGRESSIVE: Target specific user navigation elements */
+.user-nav li,
+.user-nav li *,
+.user-nav a,
+.user-nav a *,
+.nav-pills li,
+.nav-pills li *,
+.nav-pills a,
+.nav-pills a *,
+.user-nav__summary,
+.user-nav__summary *,
+.user-nav__activity,
+.user-nav__activity *,
+.user-nav__notifications,
+.user-nav__notifications *,
+.user-nav__personal-messages,
+.user-nav__personal-messages *,
+.user-nav__badges,
+.user-nav__badges *,
+.user-nav__preferences,
+.user-nav__preferences * {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none transparent !important;
+}
+
+/* Override ANY inline styles on navigation elements */
+.user-nav li[style],
+.user-nav a[style],
+.nav-pills li[style],
+.nav-pills a[style] {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none transparent !important;
+}
+
+/* CLEAN SLATE - Remove all borders from navigation elements */
+.user-nav li,
+.user-nav li *,
+.user-nav a,
+.user-nav a *,
+.nav-pills li,
+.nav-pills li *,
+.nav-pills a,
+.nav-pills a * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+/* TARGET SPECIFIC IDS - Remove outlines but keep blue underlines */
+#ember120,
+#ember121,
+#ember122,
+#ember123,
+#ember124,
+#ember125,
+#ember120 *,
+#ember121 *,
+#ember122 *,
+#ember123 *,
+#ember124 *,
+#ember125 * {
+  outline: none !important;
+  box-shadow: none !important;
+  background: none transparent !important;
+  /* Remove top, left, right borders but allow bottom borders */
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* SELECTIVE APPROACH: Only remove outlines and box-shadows from inline styles */
+*[style*="outline"] {
+  outline: none !important;
+}
+
+*[style*="box-shadow"] {
+  box-shadow: none !important;
+}
+
+/* Remove unwanted borders but preserve bottom borders for active states */
+*[style*="border-top"],
+*[style*="border-left"],
+*[style*="border-right"] {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* Remove outlines from focus/active states but allow blue underlines */
+.nav-pills li:focus,
+.nav-pills li:active,
+.nav-pills a:focus,
+.nav-pills a:active,
+.user-nav li:focus,
+.user-nav li:active,
+.user-nav a:focus,
+.user-nav a:active {
+  outline: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+  background: none transparent !important;
+}
+
+/* Blue underlines on main button elements on hover */
+.user-nav li:hover,
+.user-nav li:hover > a {
+  border-bottom: 2px solid #0091ff !important;
+  transition: border-bottom 0.2s ease !important;
+}
+
+/* Blue underlines on active main button elements */
+.user-nav li.active,
+.user-nav li[aria-current="page"],
+.user-nav li.active > a,
+.user-nav li[aria-current="page"] > a {
+  border-bottom: 2px solid #0091ff !important;
+}
+
+/* Ensure NO underlines on text and icons */
+.user-nav li > a > span,
+.user-nav li > a > svg,
+.user-nav span,
+.user-nav svg {
+  border-bottom: none !important;
+  text-decoration: none !important;
+}
+
+/* Make inactive navigation text slightly less white (more gray) */
+.user-nav li:not(.active) > a > span,
+.user-nav li:not([aria-current="page"]) > a > span {
+  color: #b0b0b0 !important;
+  opacity: 0.8 !important;
+}
+
+/* Keep active navigation text bright white */
+.user-nav li.active > a > span,
+.user-nav li[aria-current="page"] > a > span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Make navigation text white on hover */
+.user-nav li:hover > a > span,
+.nav-pills li:hover > a > span,
+.messages-nav li:hover > a > span {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Make side panel notification labels less white (more gray) */
+#quick-access-all-notifications .item-label,
+#quick-access-replies .item-label,
+#quick-access-messages .item-label,
+#quick-access-likes .item-label,
+#quick-access-mentions .item-label,
+[id^="quick-access-"] .item-label,
+[id^="quick-access-"] > ul > li > a > div > span.item-label {
+  color: #b0b0b0 !important;
+  opacity: 0.85 !important;
+}
+
+/* Remove any underlines from span and svg elements inside ALL navigation links */
+.nav-pills a span,
+.user-nav a span,
+.nav-pills a svg,
+.user-nav a svg,
+.user-nav__summary > a > span,
+.user-nav__summary > a > svg,
+.user-nav__activity > a > span,
+.user-nav__activity > a > svg,
+.user-nav__notifications > a > span,
+.user-nav__notifications > a > svg,
+.user-nav__personal-messages > a > span,
+.user-nav__personal-messages > a > svg,
+.user-nav__badges > a > span,
+.user-nav__badges > a > svg,
+.user-nav__preferences > a > span,
+.user-nav__preferences > a > svg,
+#ember120 > span,
+#ember120 > svg,
+#ember121 > span,
+#ember121 > svg,
+#ember122 > span,
+#ember122 > svg,
+#ember123 > span,
+#ember123 > svg,
+#ember124 > span,
+#ember124 > svg,
+#ember125 > span,
+#ember125 > svg,
+[id^="ember"] > span,
+[id^="ember"] > svg {
+  border-bottom: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any underlines from the button/li containers */
+.nav-pills li:hover,
+.user-nav li:hover,
+.nav-pills li.active,
+.user-nav li.active,
+li[aria-current="page"] {
+  border-bottom: none !important;
+}
+
+/* Add 10px spacing below the specified container */
+#main-outlet > div.container.viewing-self > section > div > div > div {
+  margin-bottom: 10px !important;
+}
+
+/* Add 10px spacing above the user stats section heading */
+#user-content > div.top-section.stats-section > h3 {
+  margin-top: 10px !important;
+}
+
+/* Keep #ember341 text white on hover and active */
+#ember341,
+#ember341 *,
+#ember341:hover,
+#ember341:hover *,
+#ember341:active,
+#ember341:active *,
+#ember341.active,
+#ember341.active * {
+  color: #ffffff !important;
+}
+
+/* Keep d-button-label text white on hover and active */
+.d-button-label,
+.d-button-label *,
+button:hover .d-button-label,
+button:hover .d-button-label *,
+button:active .d-button-label,
+button:active .d-button-label *,
+button.active .d-button-label,
+button.active .d-button-label *,
+.btn:hover .d-button-label,
+.btn:hover .d-button-label *,
+.btn:active .d-button-label,
+.btn:active .d-button-label *,
+.btn.active .d-button-label,
+.btn.active .d-button-label * {
+  color: #ffffff !important;
+}
+
+/* Hide the inbox dropdown button */
+.messages-dropdown-trigger,
+.btn.messages-dropdown-trigger,
+button.messages-dropdown-trigger,
+[data-identifier="messages-dropdown"],
+[title="all inboxes"],
+#ember63,
+.fk-d-menu__trigger.messages-dropdown-trigger {
+  display: none !important;
+}
+
+/* Remove left margin and padding from user navigation secondary */
+.user-navigation.user-navigation-secondary {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Align secondary navigation elements to the left */
+.user-navigation.user-navigation-secondary .category-breadcrumb,
+.user-navigation.user-navigation-secondary .horizontal-overflow-nav,
+.user-navigation.user-navigation-secondary .nav-pills,
+.user-navigation.user-navigation-secondary .messages-nav,
+.user-navigation.user-navigation-secondary ol,
+.user-navigation.user-navigation-secondary ul {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Ensure first navigation item starts at left edge */
+.user-navigation.user-navigation-secondary .nav-pills li:first-child,
+.user-navigation.user-navigation-secondary .messages-nav li:first-child {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* Hide the breadcrumb section in messages navigation to match notifications */
+.user-navigation.user-navigation-secondary .category-breadcrumb {
+  display: none !important;
+}
+
+/* Make messages navigation start directly like notifications navigation */
+.user-navigation.user-navigation-secondary .horizontal-overflow-nav {
+  margin-top: 0 !important;
+}
+
+/* Increase icon size in main navigation section */
+#main-outlet > div.container.viewing-self > section > div > section svg,
+#main-outlet > div.container.viewing-self > section > div > section .d-icon,
+#main-outlet > div.container.viewing-self > section > div > section .svg-icon {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+}
+
+/* Increase icon size in secondary navigation section */
+#main-outlet > div.container.viewing-self > section > div > div > div > nav svg,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav .d-icon,
+#main-outlet > div.container.viewing-self > section > div > div > div > nav .svg-icon {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  max-width: 20px !important;
+  max-height: 20px !important;
+}
+
+/* Align relative date times to the right */
+.relative-date,
+span.relative-date {
+  text-align: right !important;
+  float: right !important;
+  margin-left: auto !important;
+}
+
+/* Make list icons blue only in user-content area */
+#user-content > div li svg,
+#user-content > div li .d-icon,
+#user-content > div li .svg-icon,
+#user-content > div ul svg,
+#user-content > div ul .d-icon,
+#user-content > div ul .svg-icon,
+#user-content > div ol svg,
+#user-content > div ol .d-icon,
+#user-content > div ol .svg-icon {
+  color: #0091ff !important;
+  fill: #0091ff !important;
+}
+
+/* Increase icon size in topic list posts column */
+#ember70 > table > tbody > tr > td.num.posts-map.posts.topic-list-data > a > svg,
+.topic-list-data.posts svg,
+.posts-map svg {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+}
+
+/* Make specific topic list texts brighter blue */
+#ember68 > table > tbody > tr:nth-child(4) > td.main-link.topic-list-data > span > a,
+.topic-list-data span a,
+.main-link.topic-list-data span a {
+  color: #40a9ff !important;
+}
+
+/* Increase topic status icon size */
+.topic-list-item .topic-statuses span,
+.topic-list-item .topic-statuses span svg,
+.topic-list-item .topic-statuses span .d-icon,
+.topic-statuses span,
+.topic-statuses span svg,
+.topic-statuses span .d-icon {
+  width: 18px !important;
+  height: 18px !important;
+  min-width: 18px !important;
+  min-height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  font-size: 18px !important;
+  margin-right: 6px !important;
+}
+
+/* Hide unresolved labels */
+.is-solved-label,
+span.is-solved-label,
+.topic-list-item .is-solved-label,
+.main-link.topic-list-data .is-solved-label,
+.topic-list-data .is-solved-label {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Position avatar properly within the names container */
+.post__body.topic-body .topic-meta-data .names.trigger-user-card {
+  position: relative !important;
+  padding-left: 40px !important;
+  display: block !important;
+}
+
+/* Position the avatar absolutely within the names container */
+.topic-avatar {
+  position: absolute !important;
+  left: 20px !important;
+  top: 17px !important;
+  width: 40px !important;
+  height: 40px !important;
+  z-index: 1 !important;
+}
+
+/* Style the real avatar image */
+.topic-avatar img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  margin: 0 !important;
+  display: block !important;
+  background: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove vertical lines from posts */
+.topic-post::before,
+.topic-post::after,
+.post__row::before,
+.post__row::after,
+.topic-avatar::before,
+.topic-avatar::after,
+.post__body::before,
+.post__body::after,
+.topic-body::before,
+.topic-body::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove borders that create vertical lines */
+.topic-post,
+.post__row,
+.topic-avatar,
+.post__body,
+.topic-body,
+.topic-meta-data,
+.names,
+.post-avatar,
+.boxed,
+.onscreen-post,
+article,
+.clearfix {
+  border-left: none !important;
+  border-right: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any vertical separators or lines */
+.topic-post .topic-avatar::after,
+.post__row::after,
+.topic-avatar .post-avatar::after,
+.sticky-avatar::after,
+.post--sticky-avatar::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+/* Remove timeline or connection lines */
+.timeline-container,
+.timeline-line,
+.post-stream .timeline,
+.topic-timeline .timeline-container::before,
+.topic-timeline .timeline-container::after {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Remove vertical lines from specific post elements */
+#topic > div.posts-wrapper > div.post-stream > div:nth-child(1),
+#topic > div.posts-wrapper > div.post-stream > div:nth-child(1)::before,
+#topic > div.posts-wrapper > div.post-stream > div:nth-child(1)::after,
+#topic > div.posts-wrapper > div.post-stream > div:nth-child(1) *,
+#topic > div.posts-wrapper > div.post-stream > div:nth-child(1) *::before,
+#topic > div.posts-wrapper > div.post-stream > div:nth-child(1) *::after {
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Remove vertical lines from all post-stream children */
+.post-stream > div,
+.post-stream > div::before,
+.post-stream > div::after,
+.post-stream > div *,
+.post-stream > div *::before,
+.post-stream > div *::after {
+  border-left: none !important;
+  border-right: none !important;
+  background-image: none !important;
+}
+
+/* Remove background/fill color from inner post content boxes */
+.post__regular.regular.post__contents.contents,
+.cooked {
+  background-color: transparent !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Keep special boxes with their background colors */
+.cooked pre,
+.cooked blockquote,
+.cooked .highlight,
+.cooked .codeblock,
+.cooked .quote,
+.cooked .spoiler,
+.cooked .poll,
+.cooked .onebox,
+.cooked .discourse-local-date,
+.cooked .lightbox-wrapper {
+  background-color: revert !important;
+  background: revert !important;
+}
+
+/* Remove background from name area and action buttons */
+.topic-meta-data,
+.names.trigger-user-card,
+.post-infos,
+.post__menu-area.post-menu-area,
+.post-controls,
+.actions,
+.post-controls .actions,
+.post-controls nav {
+  background-color: transparent !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Remove background from bottom post elements */
+.post__topic-map.topic-map,
+.topic-map,
+.topic-map__contents,
+.topic-map__stats,
+.topic-map__users-list,
+.small-user-list,
+.who-read,
+.who-liked,
+.post-links-container,
+.post-links,
+.post__actions.post-actions {
+  background-color: transparent !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Increase blue post title font size */
+#ember68 > table > tbody > tr > td.main-link.topic-list-data > span > a,
+.topic-list .main-link .link-top-line a,
+.topic-list-data .link-top-line a,
+.main-link a.title {
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+/* Add rounded corners to post title focus/click state */
+#ember68 > table > tbody > tr > td.main-link.topic-list-data > span > a:focus,
+#ember68 > table > tbody > tr > td.main-link.topic-list-data > span > a:active,
+.topic-list .main-link .link-top-line a:focus,
+.topic-list .main-link .link-top-line a:active,
+.topic-list-data .link-top-line a:focus,
+.topic-list-data .link-top-line a:active,
+.main-link a.title:focus,
+.main-link a.title:active {
+  border-radius: 6px !important;
+  padding: 2px 4px !important;
+  outline: none !important;
+  background-color: rgba(33, 150, 243, 0.1) !important;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.3) !important;
+}
+
+/* Move staff button down by 2 pixels */
+.staff,
+.staff-badge,
+.staff-label,
+.d-button.staff,
+button.staff,
+[class*="staff"],
+.badge.staff {
+  position: relative !important;
+  top: 2px !important;
+}
+
+/* Adjust staff icon dimensions */
+.user-group.trigger-group-card,
+a.user-group.trigger-group-card {
+  padding: 1px 12px 3px 12px !important;
+  min-height: 18px !important;
+  height: auto !important;
+  display: inline-block !important;
+  line-height: 1.2 !important;
+}
+
+/* Remove horizontal lines from menu tabs container */
+#ember3 > div.drop-down-mode.d-header-wrap > header > div > div > div.panel > div > div > div > div > div.menu-tabs-container > div.bottom-tabs.tabs-list,
+#ember3 > div.drop-down-mode.d-header-wrap > header > div > div > div.panel > div > div > div > div > div.menu-tabs-container > div.bottom-tabs.tabs-list::before,
+#ember3 > div.drop-down-mode.d-header-wrap > header > div > div > div.panel > div > div > div > div > div.menu-tabs-container > div.bottom-tabs.tabs-list::after {
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* Make all notification label text less white (more gray) */
+#user-content > div > div.user-notifications-list > li.notification > a > div > span.item-label,
+#user-content > div > div.user-notifications-list > li.notification.unread > a > div > span.item-label,
+#user-content > div > div.user-notifications-list > li.notification.read > a > div > span.item-label,
+#user-content > div > div.user-notifications-list > li.notification.unread.posted > a > div > span.item-label,
+#user-content > div > div.user-notifications-list .item-label {
+  color: #b0b0b0 !important;
+  opacity: 0.85 !important;
+}
+
+/* Fix double blue outlines on edit title */
+#edit-title:focus {
+  outline: none !important;
+  border: 1px solid var(--primary-color) !important;
+  box-shadow: 0 0 0 1px var(--primary-color) !important;
+}
+
+/* Make all usernames white */
+.username,
+.username a,
+.names .username,
+.names .username a,
+.first.username,
+.first.username a,
+.trigger-user-card .username,
+.trigger-user-card .username a,
+.poster .username,
+.poster .username a,
+.topic-meta-data .username,
+.topic-meta-data .username a,
+.names.trigger-user-card .username,
+.names.trigger-user-card .username a,
+.names.trigger-user-card a,
+.names.trigger-user-card span a {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* Remove black commas between tags */
+.discourse-tag::after,
+.discourse-tag + .discourse-tag::before,
+.list-tags .discourse-tag::after,
+.topic-list .discourse-tag::after,
+.topic-list-item .discourse-tag::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Remove comma separators in tag lists */
+.list-tags .comma,
+.topic-list .comma,
+.topic-list-item .comma,
+.discourse-tag .comma,
+.discourse-tag + .comma {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+
+/* Make element match banner look and feel */
+#ember50 > div {
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(50, 50, 50, 0.95)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+  color: #ffffff !important;
+  padding: 16px 36px 16px 36px !important;
+  margin: 8px 0 !important;
+  position: relative !important;
+  left: -35px !important;
+}
+
+/* Limit banner content width to match topic content area */
+#banner-content {
+  max-width: calc(100% - 300px) !important;
+  width: auto !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Hide reply control bar only when not actively composing */
+#reply-control:not(.open):not(.draft):not(.composing) {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Make top bar black */
+#ember3 > div.drop-down-mode.d-header-wrap,
+#ember3 > div.drop-down-mode.d-header-wrap > header,
+#ember3 > div.drop-down-mode.d-header-wrap > header > div,
+.d-header-wrap,
+.d-header,
+header.d-header {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  background-image: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border: none !important;
+}
+
+/* Add drop shadow to header panel */
+#ember3 > div.drop-down-mode.d-header-wrap > header > div > div > div.panel > div > div {
+  box-shadow: -8px 0 16px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Give close button (X) more room */
+.close,
+.close-button,
+.btn-close,
+.modal-close,
+.d-button-close,
+button[aria-label*="close"],
+button[title*="close"],
+.btn[aria-label*="Close"],
+.btn[title*="Close"],
+[class*="close"] {
+  padding: 8px 12px !important;
+  margin: 4px !important;
+  min-width: 32px !important;
+  min-height: 32px !important;
+}
+
+/* Tag colors now properly integrated above with theme-specific selectors */

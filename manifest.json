@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Unity Discussions Custom Styles",
+  "version": "1.0",
+  "description": "Custom styling overrides for Unity Discussions website",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://discussions.unity.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://discussions.unity.com/*"],
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Unity Discussions Styler"
+  }
+}

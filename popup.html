@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Discussions Styler</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .header p {
+            margin: 5px 0 0 0;
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .control-group label {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .color-input {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        input[type="color"] {
+            width: 40px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="range"] {
+            width: 100%;
+            height: 5px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.3);
+            outline: none;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .toggle-switch.active {
+            background: #4CAF50;
+        }
+        
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            background: white;
+            top: 2px;
+            left: 2px;
+            transition: left 0.3s;
+        }
+        
+        .toggle-switch.active::after {
+            left: 27px;
+        }
+        
+        .preset-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .preset-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+        
+        .preset-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer p {
+            margin: 0;
+            font-size: 11px;
+            opacity: 0.7;
+        }
+        
+        .status {
+            padding: 8px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 12px;
+            margin-bottom: 15px;
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid rgba(76, 175, 80, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Unity Discussions Styler</h1>
+        <p>Customize your Unity Discussions experience</p>
+    </div>
+    
+    <div class="status">
+        ✅ Custom styles active on discussions.unity.com
+    </div>
+    
+    <div class="controls">
+        <div class="control-group">
+            <label>Primary Color</label>
+            <div class="color-input">
+                <input type="color" id="primaryColor" value="#2196F3">
+                <span id="primaryColorValue">#2196F3</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label>Background Color</label>
+            <div class="color-input">
+                <input type="color" id="backgroundColor" value="#1a1a1a">
+                <span id="backgroundColorValue">#1a1a1a</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label>Text Color</label>
+            <div class="color-input">
+                <input type="color" id="textColor" value="#ffffff">
+                <span id="textColorValue">#ffffff</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label>Animation Speed</label>
+            <input type="range" id="animationSpeed" min="0.1" max="1" step="0.1" value="0.3">
+            <span id="animationSpeedValue">0.3s</span>
+        </div>
+        
+        <div class="control-group">
+            <label>Enable Animations</label>
+            <div class="toggle-switch active" id="animationsToggle"></div>
+        </div>
+    </div>
+    
+    <div class="preset-buttons">
+        <button class="preset-btn" data-preset="dark">Dark Blue</button>
+        <button class="preset-btn" data-preset="purple">Purple</button>
+        <button class="preset-btn" data-preset="green">Green</button>
+        <button class="preset-btn" data-preset="orange">Orange</button>
+    </div>
+    
+    <div class="footer">
+        <p>Made with ❤️ for Unity developers</p>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
